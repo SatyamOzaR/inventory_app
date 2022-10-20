@@ -1,0 +1,19 @@
+body {
+	padding-top: 65px;
+	padding-bottom: 65px;
+}
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+form {
+	width: 450px;
+}
+
+.toast {
+	top: 40px;
+	right: 20px;
+	position: fixed;
+	z-index: 100000;
+}
