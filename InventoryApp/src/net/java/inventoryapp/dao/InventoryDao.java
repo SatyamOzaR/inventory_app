@@ -34,20 +34,13 @@ public class InventoryDao {
 	}
 
 	public List<InventoryItem> selectAllItems() {
-
-		// using try-with-resources to avoid closing resources (boiler plate code)
 		List<InventoryItem> items = new ArrayList<>();
-
-		// Step 1: Establishing a Connection
+		
 		try (Connection connection = JDBCUtils.getConnection();
-
-				// Step 2:Create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_ITEMS);) {
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
 			ResultSet rs = preparedStatement.executeQuery();
 
-			// Step 4: Process the ResultSet object.
 			while (rs.next()) {
 				long Id = rs.getLong("id");
 				String Item = rs.getString("item");

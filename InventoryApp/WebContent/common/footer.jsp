@@ -10,6 +10,6 @@
 
 <footer class="footer font-small black">
 	<div class="footer-copyright text-center py-3" style="color: white">
-	©2022@CBREX Copyright</div>
+	2022@CBREX ©Copyright</div>
 </footer>
 

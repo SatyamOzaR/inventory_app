@@ -59,16 +59,16 @@ public class StoreController extends HttpServlet {
 				storeDao.AddItem(item);
 			}
 			flag = 0;
+			
 			InventoryItem InvItem = new InventoryItem(
 					1, item, LoginController.currentUser, LocalDateTime.now(), "Added");
 			inventoryDao.insertItem(InvItem);
 			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("inventory/item_store.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("inventory/inventory_list.jsp");
 		dispatcher.forward(request, response);
 	}
 }

@@ -20,7 +20,6 @@ public class StoreDao {
 	private static final String DELETE_ITEM_SQL = "DELETE FROM store_item WHERE itemName = ?;";
 	
 	public void updateCount(String itemName, boolean increment) throws SQLException {
-		// try-with-resource statement will auto close the connection.
 		try (Connection connection = JDBCUtils.getConnection()){
 			if(increment) {
 				PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_INCREMENT_COUNT);
@@ -37,20 +36,13 @@ public class StoreDao {
 	}
 	
 	public List<StoreItem> selectAllItems() {
-
-		// using try-with-resources to avoid closing resources (boiler plate code)
 		List<StoreItem> items = new ArrayList<>();
-
-		// Step 1: Establishing a Connection
+		
 		try (Connection connection = JDBCUtils.getConnection();
-
-				// Step 2:Create a statement using connection object
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_ITEMS);) {
 			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
 			ResultSet rs = preparedStatement.executeQuery();
-
-			// Step 4: Process the ResultSet object.
+			
 			while (rs.next()) {
 				long Id = rs.getLong("itemId");
 				String Item = rs.getString("itemName");
