@@ -33,8 +33,15 @@
 				<form action="<%=request.getContextPath()%>/store" method="post">
 				<div class="form-group">
 				  <select name="item" class="h4">
-				    <option value="Potato" class="h4">Potato</option>
+				    <option value="Beet" class="h4">Beet</option>
+				    <option value="Broccoli" class="h4">Broccoli</option>
+				    <option value="Cabbage" class="h4">Cabbage</option>
+				    <option value="Capsicum" class="h4">Capsicum</option>
 				    <option value="Carrot" class="h4">Carrot</option>
+				    <option value="Corn" class="h4">Corn</option>
+				    <option value="Eggplant" class="h4">Eggplant</option>
+				    <option value="Potato" class="h4">Potato</option>
+				    <option value="Spinach" class="h4">Spinach</option>
 				    <option value="Tomato" class="h4">Tomato</option>
 				  </select>
 				  </div>
@@ -49,8 +56,15 @@
 				<form action="<%=request.getContextPath()%>/delete" method="post">
 				<div class="form-group">
 				  <select name="item" class="h4">
-				    <option value="Potato" class="h4">Potato</option>
+				    <option value="Beet" class="h4">Beet</option>
+				    <option value="Broccoli" class="h4">Broccoli</option>
+				    <option value="Cabbage" class="h4">Cabbage</option>
+				    <option value="Capsicum" class="h4">Capsicum</option>
 				    <option value="Carrot" class="h4">Carrot</option>
+				    <option value="Corn" class="h4">Corn</option>
+				    <option value="Eggplant" class="h4">Eggplant</option>
+				    <option value="Potato" class="h4">Potato</option>
+				    <option value="Spinach" class="h4">Spinach</option>
 				    <option value="Tomato" class="h4">Tomato</option>
 				  </select>
 				  </div>
